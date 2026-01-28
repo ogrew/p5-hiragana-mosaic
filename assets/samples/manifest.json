@@ -1,0 +1,56 @@
+{
+  "samples": [
+    {
+      "label": "a1.jpg",
+      "file": "assets/samples/a1.jpg"
+    },
+    {
+      "label": "a2.jpg",
+      "file": "assets/samples/a2.jpg"
+    },
+    {
+      "label": "a3.jpg",
+      "file": "assets/samples/a3.jpg"
+    },
+    {
+      "label": "b0.jpg",
+      "file": "assets/samples/b0.jpg"
+    },
+    {
+      "label": "b1.jpg",
+      "file": "assets/samples/b1.jpg"
+    },
+    {
+      "label": "b2.jpg",
+      "file": "assets/samples/b2.jpg"
+    },
+    {
+      "label": "b3.jpg",
+      "file": "assets/samples/b3.jpg"
+    },
+    {
+      "label": "b4.jpg",
+      "file": "assets/samples/b4.jpg"
+    },
+    {
+      "label": "b5.jpg",
+      "file": "assets/samples/b5.jpg"
+    },
+    {
+      "label": "b6.jpg",
+      "file": "assets/samples/b6.jpg"
+    },
+    {
+      "label": "b7.jpg",
+      "file": "assets/samples/b7.jpg"
+    },
+    {
+      "label": "b8.jpg",
+      "file": "assets/samples/b8.jpg"
+    },
+    {
+      "label": "b9.jpg",
+      "file": "assets/samples/b9.jpg"
+    }
+  ]
+}

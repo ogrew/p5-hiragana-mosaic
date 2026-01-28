@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hiragana Mosaic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700&family=Sawarabi+Mincho&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=DotGothic16&family=Cherry+Bomb+One&family=Aoboshi+One&family=Kiwi+Maru&family=Potta+One&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nikukyu.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tweakpane@4.0.3/dist/tweakpane.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <div id="stage">
+      <div id="canvas-wrap"></div>
+      <div id="empty-state" aria-live="polite">
+        <div class="empty-title">Hiragana Mosaic</div>
+        <div class="empty-sub">右上でサンプル画像を選ぶか、ローカル画像を読み込んでください。</div>
+      </div>
+    </div>
+    <aside id="ui" aria-label="controls">
+      <div class="ui-header">
+        <div class="ui-title">Hiragana Mosaic</div>
+        <button id="togglePanel" type="button">Hide Panel</button>
+      </div>
+      <div class="ui-block">
+        <label class="ui-label" for="sampleSelect">Sample Image</label>
+        <select id="sampleSelect"></select>
+        <button id="refreshSamples" type="button">Reload Samples</button>
+      </div>
+      <div class="ui-block">
+        <label class="ui-label" for="fileInput">Local Image</label>
+        <input id="fileInput" type="file" accept="image/*" />
+        <div class="ui-note">ローカル画像はブラウザ内で処理され、外部送信されません。</div>
+      </div>
+      <div id="pane"></div>
+      <div id="status" role="status"></div>
+    </aside>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
