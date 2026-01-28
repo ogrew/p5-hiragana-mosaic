@@ -14,7 +14,7 @@ const defaultParams = {
   alphaThreshold: 10,
   imageAlpha: 255,
   textAlpha: 255,
-  backgroundColor: '#f6f1e6',
+  backgroundColor: '#222222',
   letterSpacing: 1.0,
   jitter: 0.0,
   fontScale: 1.4,

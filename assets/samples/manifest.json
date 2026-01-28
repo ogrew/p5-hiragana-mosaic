@@ -1,56 +1,52 @@
 {
   "samples": [
     {
-      "label": "a1.jpg",
-      "file": "assets/samples/a1.jpg"
+      "label": "sample01.png",
+      "file": "assets/samples/sample01.png"
     },
     {
-      "label": "a2.jpg",
-      "file": "assets/samples/a2.jpg"
+      "label": "sample02.png",
+      "file": "assets/samples/sample02.png"
     },
     {
-      "label": "a3.jpg",
-      "file": "assets/samples/a3.jpg"
+      "label": "sample03.png",
+      "file": "assets/samples/sample03.png"
     },
     {
-      "label": "b0.jpg",
-      "file": "assets/samples/b0.jpg"
+      "label": "sample04.png",
+      "file": "assets/samples/sample04.png"
     },
     {
-      "label": "b1.jpg",
-      "file": "assets/samples/b1.jpg"
+      "label": "sample05.png",
+      "file": "assets/samples/sample05.png"
     },
     {
-      "label": "b2.jpg",
-      "file": "assets/samples/b2.jpg"
+      "label": "sample06.png",
+      "file": "assets/samples/sample06.png"
     },
     {
-      "label": "b3.jpg",
-      "file": "assets/samples/b3.jpg"
+      "label": "sample07.png",
+      "file": "assets/samples/sample07.png"
     },
     {
-      "label": "b4.jpg",
-      "file": "assets/samples/b4.jpg"
+      "label": "sample08.png",
+      "file": "assets/samples/sample08.png"
     },
     {
-      "label": "b5.jpg",
-      "file": "assets/samples/b5.jpg"
+      "label": "sample09.png",
+      "file": "assets/samples/sample09.png"
     },
     {
-      "label": "b6.jpg",
-      "file": "assets/samples/b6.jpg"
+      "label": "sample10.png",
+      "file": "assets/samples/sample10.png"
     },
     {
-      "label": "b7.jpg",
-      "file": "assets/samples/b7.jpg"
+      "label": "sample11.png",
+      "file": "assets/samples/sample11.png"
     },
     {
-      "label": "b8.jpg",
-      "file": "assets/samples/b8.jpg"
-    },
-    {
-      "label": "b9.jpg",
-      "file": "assets/samples/b9.jpg"
+      "label": "sample12.png",
+      "file": "assets/samples/sample12.png"
     }
   ]
 }

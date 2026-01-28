@@ -1,5 +1,5 @@
 :root {
-  --bg-1: #f6f1e6;
+  --bg-1: #222222;
   --bg-2: #dfe6dd;
   --ink-1: #201b16;
   --ink-2: #5b5147;
@@ -98,7 +98,7 @@ body {
   --tp-base-background-color: rgba(255, 255, 255, 0.78);
   --tp-base-shadow-color: rgba(0, 0, 0, 0.1);
   --tp-button-background-color: #201b16;
-  --tp-button-foreground-color: #f6f1e6;
+  --tp-button-foreground-color: #222222;
   --tp-container-background-color: rgba(255, 255, 255, 0.65);
   --tp-accent-color: #ff6b4a;
   --tp-accent-foreground-color: #201b16;
@@ -178,7 +178,7 @@ body {
   border-radius: var(--radius-md);
   border: none;
   background: var(--ink-1);
-  color: #f6f1e6;
+  color: #222222;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
