@@ -221,6 +221,29 @@ body {
   color: #b13a2a;
 }
 
+#followButton {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.78);
+  color: var(--ink-1);
+  text-decoration: none;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  border: 1px solid rgba(32, 27, 22, 0.16);
+  box-shadow: 0 10px 24px rgba(32, 27, 22, 0.18);
+  backdrop-filter: blur(8px);
+  z-index: 9;
+}
+
+#followButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 28px rgba(32, 27, 22, 0.22);
+}
+
 @media (max-width: 720px) {
   #app {
     padding: 18px;
@@ -234,5 +257,10 @@ body {
     right: 8px;
     left: 8px;
     width: auto;
+  }
+
+  #followButton {
+    left: 12px;
+    bottom: 12px;
   }
 }
