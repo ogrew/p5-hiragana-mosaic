@@ -34,6 +34,7 @@
 - **CharsetManager**
   - `charset`（ひらがな文字列）とモード（auto / manual）の管理
   - auto時は **DensityAnalyzer** を使って密度ソート結果を生成・キャッシュ
+  - 入力は日本語（ひらがな/カタカナ/漢字）+ 空白に限定（非日本語は除外）
 - **DensityAnalyzer**
   - オフスクリーンで各文字の「密度」を計測し、暗→明の順に並べ替え
 - **Renderer**
@@ -60,6 +61,9 @@ GitHub Pages（リポジトリ配下パス）でも壊れにくいよう、静�
       sample_01.jpg
       sample_02.png
       ...
+  /scripts
+    generate_manifest.py
+  /serve
   /src
     main.js
     ui.js
@@ -278,7 +282,19 @@ Canvas 2D Context でクリップする。
   - （任意）`densitySampleSize`, `densityThreshold`
 - font:
   - `fontFamily`（選択）
+  - `fontSizeScale`（文字サイズ倍率）
   - `Load Font`（ボタン）
+
+### 10.3 ショートカット
+- `p`：パネル表示/非表示の切替
+- `s`：Save PNG
+
+### 10.4 Save PNG
+- 保存ボタンはパネル最下部に配置
+- ファイル名は `元画像名-Hiramosa-unixtime.png`
+
+### 10.5 パネル初期状態
+- 初期状態は **非表示（HIDE PANEL）**
 
 ### 10.2 画像入力UI
 
@@ -320,6 +336,12 @@ Canvas 2D Context でクリップする。
 ### 12.3 注意点
 
 - ローカル画像はブラウザ内のみ（File API）。GitHub Pages上でも問題なく動作する
+
+---
+
+## 13. 開発補助
+- `./serve` でローカルサーバを起動
+- `scripts/generate_manifest.py` でサンプル画像の manifest を自動生成
 - サンプル画像は `assets/` 配下に置き、同一オリジンで配信されるためCORS問題は基本発生しない
 
 ---
@@ -335,4 +357,3 @@ Canvas 2D Context でクリップする。
 7) 透明セル（alphaThreshold）
 8) フォント選択 + Load Fontボタン + 密度再計測
 9) letterSpacing / jitter
-

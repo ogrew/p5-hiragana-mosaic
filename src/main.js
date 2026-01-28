@@ -165,6 +165,25 @@ const sketch = (p) => {
     updateSamplesUI(samples);
   };
 
+  const saveCurrent = () => {
+    if (!imageManager?.image) {
+      setStatus('画像が読み込まれていません。', 'error');
+      return;
+    }
+    const base = imageManager.sourceBase || 'image';
+    const unixTime = Math.floor(Date.now() / 1000);
+    const filename = `${base}-Hiramosa-${unixTime}`;
+    p.saveCanvas(canvasRenderer.elt, filename, 'png');
+    setStatus(`Saved: ${filename}.png`, 'success');
+  };
+
+  const canHandleShortcut = () => {
+    const el = document.activeElement;
+    if (!el) return true;
+    const tag = el.tagName?.toLowerCase();
+    return tag !== 'input' && tag !== 'textarea' && !el.isContentEditable;
+  };
+
   p.setup = async () => {
     canvasRenderer = p.createCanvas(800, 600);
     canvasRenderer.parent(dom.canvasWrap);
@@ -231,15 +250,7 @@ const sketch = (p) => {
         requestRedraw();
       },
       onSave: () => {
-        if (!imageManager.image) {
-          setStatus('画像が読み込まれていません。', 'error');
-          return;
-        }
-        const base = imageManager.sourceBase || 'image';
-        const unixTime = Math.floor(Date.now() / 1000);
-        const filename = `${base}-Hiramosa-${unixTime}`;
-        p.saveCanvas(canvasRenderer.elt, filename, 'png');
-        setStatus(`Saved: ${filename}.png`, 'success');
+        saveCurrent();
       },
     }, tweakpaneRef);
 
@@ -265,11 +276,38 @@ const sketch = (p) => {
 
     const toggleButton = document.getElementById('togglePanel');
     if (toggleButton) {
-      toggleButton.addEventListener('click', () => {
-        const isCollapsed = document.getElementById('ui').classList.toggle('is-collapsed');
+      const ui = document.getElementById('ui');
+      const updateToggle = (isCollapsed) => {
         toggleButton.textContent = isCollapsed ? 'Show Panel' : 'Hide Panel';
+      };
+
+      ui.classList.add('is-collapsed');
+      updateToggle(true);
+
+      toggleButton.addEventListener('click', () => {
+        const isCollapsed = ui.classList.toggle('is-collapsed');
+        updateToggle(isCollapsed);
       });
     }
+
+    document.addEventListener('keydown', (event) => {
+      if (!canHandleShortcut()) return;
+      if (event.metaKey || event.ctrlKey || event.altKey) return;
+      const key = event.key.toLowerCase();
+      if (key === 'p') {
+        event.preventDefault();
+        const ui = document.getElementById('ui');
+        const isCollapsed = ui.classList.toggle('is-collapsed');
+        const toggleButton = document.getElementById('togglePanel');
+        if (toggleButton) {
+          toggleButton.textContent = isCollapsed ? 'Show Panel' : 'Hide Panel';
+        }
+      }
+      if (key === 's') {
+        event.preventDefault();
+        saveCurrent();
+      }
+    });
 
     updateLayout();
     reloadManifest();

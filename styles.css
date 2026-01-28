@@ -98,7 +98,7 @@ body {
   --tp-base-background-color: rgba(255, 255, 255, 0.78);
   --tp-base-shadow-color: rgba(0, 0, 0, 0.1);
   --tp-button-background-color: #201b16;
-  --tp-button-foreground-color: #222222;
+  --tp-button-foreground-color: #f6f1e6;
   --tp-container-background-color: rgba(255, 255, 255, 0.65);
   --tp-accent-color: #ff6b4a;
   --tp-accent-foreground-color: #201b16;
@@ -107,9 +107,17 @@ body {
   --tp-input-foreground-color: #201b16;
 }
 
+#ui .tp-btn {
+  color: #f6f1e6;
+}
+
+#ui .tp-btn:hover {
+  color: #f6f1e6;
+}
+
 .ui-header {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
   margin-bottom: 12px;
 }
@@ -178,9 +186,14 @@ body {
   border-radius: var(--radius-md);
   border: none;
   background: var(--ink-1);
-  color: #222222;
+  color: #f6f1e6;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#refreshSamples:focus,
+#refreshSamples:active {
+  color: #f6f1e6;
 }
 
 #refreshSamples:hover {

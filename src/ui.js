@@ -42,8 +42,18 @@ export function createUI(params, handlers, tweakpaneRef = null) {
   });
 
   const density = charset.addFolder({ title: 'Density', expanded: false });
-  density.addBinding(params, 'densitySampleSize', { min: 32, max: 128, step: 1 });
-  density.addBinding(params, 'densityThreshold', { min: 0, max: 255, step: 1 });
+  density.addBinding(params, 'densitySampleSize', {
+    label: 'sampleSize',
+    min: 32,
+    max: 128,
+    step: 1,
+  });
+  density.addBinding(params, 'densityThreshold', {
+    label: 'threshold',
+    min: 0,
+    max: 255,
+    step: 1,
+  });
 
   const tone = pane.addFolder({ title: 'Tone', expanded: false });
   tone.addBinding(params, 'gamma', { min: 0.3, max: 3.0, step: 0.01 });
@@ -55,10 +65,10 @@ export function createUI(params, handlers, tweakpaneRef = null) {
   alpha.addBinding(params, 'textAlpha', { min: 0, max: 255, step: 1 });
   alpha.addBinding(params, 'backgroundColor', { view: 'color' });
 
-  const resetButton = pane.addButton({ title: 'Reset Parameters' });
+  const resetButton = pane.addButton({ title: 'RESET PARAMS' });
   resetButton.on('click', () => handlers.onReset?.());
 
-  const saveButton = pane.addButton({ title: 'Save PNG' });
+  const saveButton = pane.addButton({ title: 'SAVE PNG' });
   saveButton.on('click', () => handlers.onSave?.());
 
   pane.on('change', (event) => handlers.onParamsChange?.(event));

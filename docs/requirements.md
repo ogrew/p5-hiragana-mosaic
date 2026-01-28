@@ -73,6 +73,7 @@
 
 ### 5.2 ひらがな文字集合（charset）
 - 文字集合はユーザーが文字列として与える
+- 入力できる文字は **日本語（ひらがな・カタカナ・漢字）と空白** に限定する
 - 例：
   - 全角スペースあり：`"はぬふせやのひと　"`
   - 全角スペースなし：`"はぬふせやのひとへ"`
@@ -148,8 +149,30 @@
   - Nico Moji（earlyaccess）
   - M PLUS 1p
   - さわらび明朝
+  - Dela Gothic One
+  - Nikukyu（earlyaccess）
+  - DotGothic16
+  - Cherry Bomb One
+  - Aoboshi One
+  - Kiwi Maru
+  - Potta One
 - UIに「フォント選択」と「Load Font」ボタンを用意し、ボタン押下で読み込み・適用を行う
 - フォント適用後は再描画する
+
+### 7.5 追加UI/操作
+- パネルの全体表示/非表示を切り替えられる
+  - 初期状態は **非表示（HIDE PANEL）**
+- ショートカット
+  - `p`：パネル表示/非表示の切替
+  - `s`：PNG保存
+- 保存（Save PNG）
+  - ファイル名は `元画像名-Hiramosa-unixtime.png`
+  - 文字のみ/overlay いずれの状態でも保存可能
+
+### 7.6 デフォルト値（最新）
+- `cols = 100`
+- `imageAlpha = 255`
+- `fontSizeScale = 1.4`
 
 ---
 
@@ -167,6 +190,12 @@
 - 静的ファイルのみで動作すること（サーバサイド不要）
 - パスは相対パス前提（GitHub Pagesのサブパス配信に耐える）
 - ローカル画像はブラウザ内でのみ扱い、外部へアップロードしない
+
+---
+
+## 12. 開発補助（ローカル運用）
+- `./serve` でローカルサーバを起動できる
+- `scripts/generate_manifest.py` で `assets/samples/manifest.json` を自動生成できる
 
 ---
 
