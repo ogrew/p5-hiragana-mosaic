@@ -35,14 +35,24 @@
       </div>
       <div class="ui-block">
         <label class="ui-label" for="fileInput">Local Image</label>
-        <input id="fileInput" type="file" accept="image/*" />
+        <div id="dropZone" class="drop-zone" role="button" tabindex="0" aria-label="Drop file or click to browse">
+          <div class="drop-zone-text">Drop file or click to browse</div>
+          <input id="fileInput" type="file" accept="image/*" />
+        </div>
         <div class="ui-note">ローカル画像はブラウザ内で処理され、外部送信されません。</div>
       </div>
-      <div id="pane"></div>
+      <div class="ui-block">
+        <div class="ui-label">Parameters</div>
+        <div id="pane"></div>
+      </div>
       <div id="status" role="status"></div>
+      <div class="ui-shortcuts">p: Toggle panel / s: Save PNG</div>
     </aside>
   </div>
-  <a id="followButton" href="https://x.com/dn0t_" target="_blank" rel="noopener noreferrer">Follow</a>
+  <div id="socialButtons">
+    <a id="followButton" href="https://x.com/dn0t_" target="_blank" rel="noopener noreferrer">Follow</a>
+    <a id="repoButton" href="https://github.com/ogrew/p5-hiragana-mosaic" target="_blank" rel="noopener noreferrer">GitHub</a>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
   <script type="module" src="src/main.js"></script>

@@ -32,6 +32,7 @@ const dom = {
   sampleSelect: document.getElementById('sampleSelect'),
   refreshSamples: document.getElementById('refreshSamples'),
   fileInput: document.getElementById('fileInput'),
+  dropZone: document.getElementById('dropZone'),
 };
 
 const CHARSET_WARNING =
@@ -273,6 +274,34 @@ const sketch = (p) => {
         imageManager.loadLocalFile(file);
       }
     });
+
+    if (dom.dropZone) {
+      const setDrag = (active) => {
+        dom.dropZone.classList.toggle('is-dragover', active);
+      };
+
+      dom.dropZone.addEventListener('dragover', (event) => {
+        event.preventDefault();
+        setDrag(true);
+      });
+
+      dom.dropZone.addEventListener('dragleave', () => setDrag(false));
+      dom.dropZone.addEventListener('drop', (event) => {
+        event.preventDefault();
+        setDrag(false);
+        const file = event.dataTransfer?.files?.[0];
+        if (file) {
+          imageManager.loadLocalFile(file);
+        }
+      });
+
+      dom.dropZone.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          dom.fileInput?.click();
+        }
+      });
+    }
 
     const toggleButton = document.getElementById('togglePanel');
     if (toggleButton) {
