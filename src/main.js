@@ -5,7 +5,7 @@ import { FontManager } from './font_manager.js';
 import { createUI } from './ui.js';
 
 const defaultParams = {
-  cols: 100,
+  cols: Math.floor(Math.random() * (180 - 10 + 1)) + 10,
   renderMode: 'overlay',
   charset: 'あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをん　',
   charsetMode: 'auto',
@@ -160,8 +160,9 @@ const sketch = (p) => {
       option.textContent = sample.label || sample.file;
       dom.sampleSelect.append(option);
     });
-    dom.sampleSelect.selectedIndex = 0;
-    const selected = samples[0];
+    const randomIndex = Math.floor(Math.random() * samples.length);
+    dom.sampleSelect.selectedIndex = randomIndex;
+    const selected = samples[randomIndex];
     imageManager.loadSample(selected.file, selected.label || selected.file);
   };
 

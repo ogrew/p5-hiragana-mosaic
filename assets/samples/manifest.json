@@ -33,6 +33,10 @@
       "file": "assets/samples/sample08.png"
     },
     {
+      "label": "sample09.png",
+      "file": "assets/samples/sample09.png"
+    },
+    {
       "label": "sample10.png",
       "file": "assets/samples/sample10.png"
     },
@@ -51,6 +55,30 @@
     {
       "label": "sample14.png",
       "file": "assets/samples/sample14.png"
+    },
+    {
+      "label": "sample15.png",
+      "file": "assets/samples/sample15.png"
+    },
+    {
+      "label": "sample16.png",
+      "file": "assets/samples/sample16.png"
+    },
+    {
+      "label": "sample17.png",
+      "file": "assets/samples/sample17.png"
+    },
+    {
+      "label": "sample18.png",
+      "file": "assets/samples/sample18.png"
+    },
+    {
+      "label": "sample19.png",
+      "file": "assets/samples/sample19.png"
+    },
+    {
+      "label": "sample20.png",
+      "file": "assets/samples/sample20.png"
     }
   ]
 }
