@@ -33,10 +33,6 @@
       "file": "assets/samples/sample08.png"
     },
     {
-      "label": "sample09.png",
-      "file": "assets/samples/sample09.png"
-    },
-    {
       "label": "sample10.png",
       "file": "assets/samples/sample10.png"
     },
@@ -47,6 +43,14 @@
     {
       "label": "sample12.png",
       "file": "assets/samples/sample12.png"
+    },
+    {
+      "label": "sample13.png",
+      "file": "assets/samples/sample13.png"
+    },
+    {
+      "label": "sample14.png",
+      "file": "assets/samples/sample14.png"
     }
   ]
 }

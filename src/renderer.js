@@ -71,6 +71,9 @@ export class Renderer {
     ctx.clip();
 
     p.randomSeed(this.seed);
+    if (Number.isFinite(params.noiseSeed)) {
+      p.noiseSeed(Math.floor(params.noiseSeed));
+    }
     for (let cy = 0; cy < rows; cy += 1) {
       for (let cx = 0; cx < cols; cx += 1) {
         const idx = (cy * cols + cx) * 4;
@@ -81,6 +84,15 @@ export class Renderer {
 
         if (a < params.alphaThreshold) {
           continue;
+        }
+
+        if (params.noiseThreshold > 0) {
+          const nx = cx * params.noiseFrequencyX;
+          const ny = cy * params.noiseFrequencyY;
+          const n = p.noise(nx, ny);
+          if (n < params.noiseThreshold) {
+            continue;
+          }
         }
 
         const luma = 0.2126 * r + 0.7152 * g + 0.0722 * b;

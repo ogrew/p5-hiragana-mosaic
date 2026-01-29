@@ -29,9 +29,35 @@ export function createUI(params, handlers, tweakpaneRef = null) {
   grid.addBinding(params, 'letterSpacing', { min: 0.5, max: 2.0, step: 0.1 });
   grid.addBinding(params, 'jitter', { min: 0, max: 1.0, step: 0.01 });
 
+  const noise = pane.addFolder({ title: 'Noise', expanded: false });
+  noise.addBinding(params, 'noiseSeed', {
+    label: 'Seed',
+    min: 0,
+    max: 1_000_000,
+    step: 1,
+  });
+  noise.addBinding(params, 'noiseFrequencyX', {
+    label: 'FrequencyX',
+    min: 0.005,
+    max: 0.209,
+    step: 0.005,
+  });
+  noise.addBinding(params, 'noiseFrequencyY', {
+    label: 'FrequencyY',
+    min: 0.005,
+    max: 0.200,
+    step: 0.005,
+  });
+  noise.addBinding(params, 'noiseThreshold', {
+    label: 'Threshold',
+    min: 0.0,
+    max: 1.0,
+    step: 0.05,
+  });
+
   const font = pane.addFolder({ title: 'Font', expanded: false });
   font.addBinding(params, 'fontFamily', { options: FONT_OPTIONS });
-  font.addBinding(params, 'fontScale', { min: 0.6, max: 1.8, step: 0.1 });
+  font.addBinding(params, 'fontScale', { label: 'FontSize', min: 0.6, max: 1.8, step: 0.1 });
   const loadButton = font.addButton({ title: 'Load Font' });
   loadButton.on('click', () => handlers.onLoadFont?.());
 
