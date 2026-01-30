@@ -3,7 +3,6 @@ const FONT_OPTIONS = {
   'M PLUS 1p': 'M PLUS 1p',
   'Sawarabi Mincho': 'Sawarabi Mincho',
   'Dela Gothic One': 'Dela Gothic One',
-  Nikukyu: 'Nikukyu',
   DotGothic16: 'DotGothic16',
   'Cherry Bomb One': 'Cherry Bomb One',
   'Aoboshi One': 'Aoboshi One',

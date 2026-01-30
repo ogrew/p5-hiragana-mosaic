@@ -150,7 +150,6 @@
   - M PLUS 1p
   - さわらび明朝
   - Dela Gothic One
-  - Nikukyu（earlyaccess）
   - DotGothic16
   - Cherry Bomb One
   - Aoboshi One
