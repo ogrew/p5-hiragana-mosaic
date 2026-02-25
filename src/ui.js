@@ -21,7 +21,7 @@ export function createUI(params, handlers, tweakpaneRef = null) {
   });
 
   const grid = pane.addFolder({ title: 'Grid', expanded: false });
-  grid.addBinding(params, 'cols', { min: 10, max: 180, step: 1 });
+  grid.addBinding(params, 'cols', { min: 20, max: 150, step: 1 });
   grid.addBinding(params, 'renderMode', {
     options: { Overlay: 'overlay', 'Text Only': 'textOnly' },
   });
@@ -56,7 +56,7 @@ export function createUI(params, handlers, tweakpaneRef = null) {
 
   const font = pane.addFolder({ title: 'Font', expanded: false });
   font.addBinding(params, 'fontFamily', { options: FONT_OPTIONS });
-  font.addBinding(params, 'fontScale', { label: 'FontSize', min: 0.6, max: 1.8, step: 0.1 });
+  font.addBinding(params, 'fontScale', { label: 'FontSize', min: 0.5, max: 2.5, step: 0.1 });
   const loadButton = font.addButton({ title: 'Load Font' });
   loadButton.on('click', () => handlers.onLoadFont?.());
 
