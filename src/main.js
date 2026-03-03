@@ -12,7 +12,7 @@ const defaultParams = {
   invert: false,
   gamma: 1.0,
   alphaThreshold: 10,
-  imageAlpha: 255,
+  imageAlpha: 200,
   textAlpha: 255,
   backgroundColor: '#222222',
   letterSpacing: 1.0,
