@@ -16,7 +16,7 @@ const defaultParams = {
   textAlpha: 255,
   backgroundColor: '#222222',
   letterSpacing: 1.0,
-  jitter: 0.0,
+  jitter: Math.round(Math.random() * 100) / 100,
   fontScale: 1.4,
   noiseSeed: Math.floor(Math.random() * 1_000_000_000),
   noiseFrequencyX: 0.05,

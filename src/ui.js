@@ -26,7 +26,7 @@ export function createUI(params, handlers, tweakpaneRef = null) {
     options: { Overlay: 'overlay', 'Text Only': 'textOnly' },
   });
   grid.addBinding(params, 'letterSpacing', { min: 0.5, max: 2.0, step: 0.1 });
-  grid.addBinding(params, 'jitter', { min: 0, max: 1.0, step: 0.01 });
+  grid.addBinding(params, 'jitter', { min: 0, max: 2.0, step: 0.01 });
 
   const noise = pane.addFolder({ title: 'Noise', expanded: false });
   noise.addBinding(params, 'noiseSeed', {

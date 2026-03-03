@@ -7,7 +7,7 @@ URL: https://ogrew.github.io/p5-hiragana-mosaic/
 - cols (10–180): グリッドの列数。値が大きいほど文字数が増えます。
 - renderMode: overlay / textOnly。元画像+文字 or 文字のみ。
 - letterSpacing (0.5–2.0): 文字間隔の倍率。
-- jitter (0.0–1.0): 文字位置のゆらぎ量。
+- jitter (0.0–2.0): 文字位置のゆらぎ量。
 - gamma (0.3–3.0): 明るさの補正。
 - invert: 明暗対応を反転。
 - alphaThreshold (0–255): 透明判定しきい値。
